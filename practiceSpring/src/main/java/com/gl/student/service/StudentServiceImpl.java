@@ -33,11 +33,11 @@ public class StudentServiceImpl implements StudentService {
 
 	@Override
 	public Student updateStudent(Student student, int id) {
-		Student emp = stdDao.findById(id).get();
-		emp.setFirstName(student.getFirstName());
-		emp.setLastName(student.getLastName());
-		emp.setEmail(student.getEmail());
-		return stdDao.save(emp);
+		Student std = stdDao.findById(id).get();
+		std.setFirstName(student.getFirstName());
+		std.setLastName(student.getLastName());
+		std.setEmail(student.getEmail());
+		return stdDao.save(std);
 	}
 
 	@Override
